@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.example.example"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application
+        android:name=".common.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- mvp -->
+        <activity android:name=".mvp.login.view.LoginActivity" />
+
+        <!-- dagger2 -->
+        <activity android:name=".dagger2.login.view.LoginActivity" />
+
+        <!-- recyclerview -->
+        <activity
+            android:name=".recyclerview.MainActivity"
+            android:theme="@style/AppThemeNoActionBar">
+        </activity>
+        <activity
+            android:name=".recyclerview.RecyclerDetailActivity"
+            android:persistableMode="persistAcrossReboots" />
+        <!-- rxjava2 -->
+        <activity android:name=".rxjava2.RxJava2Activity"></activity>
+        <activity android:name=".wxapply.WxApply"></activity>
+        <!--动态添加布局-->
+        <activity android:name=".dynamicAddLayout.DynamicAddLayout">
+
+        </activity>
+        <!--换肤-->
+        <activity android:name=".skinChange.SkinChangeAct"
+            android:persistableMode="persistAcrossReboots">
+        </activity>
+        <!--webview-->
+        <activity android:name=".webview.TestWebView"
+            android:persistableMode="persistAcrossReboots" >
+        </activity>
+        <!--passowrdInputEidt-->
+        <activity android:name=".view.InputPasswordEdit">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".realm.RealmTest"
+            android:persistableMode="persistAcrossReboots">
+
+        </activity>
+        <activity android:name=".greendao.GreenDaoTest">
+
+        </activity>
+        <activity android:name="com.example.smsDemo.SmsDemoAct">
+
+        </activity>
+    </application>
+
+</manifest>

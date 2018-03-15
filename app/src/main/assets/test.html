@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8";http-equiv="Content-Type" content="text/html">
+    <title>demotitle</title>
+    <script language="javascript">
+        function GetList(){
+            var i = window.testJS.getSize();
+            for(var n = 0;n<i;n++){
+                var jsdata = window.testJS.getObject(n);
+                window.testJS.printStr("testH5");
+            }
+        }
+        function OnKeyUp(){
+           var keycode = window.testJS.getKeyCode();
+           window.testJS.printStr(keycode);
+        }
+    </script>
+</head>
+<body>
+    <table width="400" align="center">
+        <div id="output">test</div>
+        <input type="submit" value="buttons" onclick="document.getElementById('output').innnerHTML=window.testJS.Callfunction()" />
+    </table>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewCtrl"
+            type="com.example.example.dynamicAddLayout.DynamicItemVM"/>
+        <variable
+            name="listener"
+            type="com.example.example.common.BaseRecyclerViewVM.OnItemClickListener"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@{viewCtrl.selectBackground?@drawable/day_button:@drawable/day_button_line}"
+            android:text="@{viewCtrl.dayStr}"
+            android:onClick="@{()->listener.onItemClickListener(viewCtrl.dayStr)}"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"/>
+    </LinearLayout>
+</layout>

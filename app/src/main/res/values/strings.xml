@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">example</string>
+    <string name="drawer_open">开</string>
+    <string name="drawer_clsoe">关</string>
+    <string name="transition_book_img">过度</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
